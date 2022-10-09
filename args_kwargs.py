@@ -15,3 +15,8 @@ def func2(x, *args):
   print(f'{x}: {result}')
   
 func2(1, 'a', 'b', 'c')
+
+def func3(**kwargs):
+  return kwargs
+
+print(func3(name='田中', id=0, type='02'))
