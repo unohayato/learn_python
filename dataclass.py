@@ -1,5 +1,6 @@
 
 from dataclasses import field, dataclass
+import dataclasses
 
 @dataclass
 class User:
@@ -30,3 +31,11 @@ user4 = User3('u', 30)
 
 print(user3 == user4)
 
+@dataclass
+class User4:
+  name: str
+  age: int
+
+user5 = User4('t', 40)
+user5 = dataclasses.asdict(user5)
+print(user5)
