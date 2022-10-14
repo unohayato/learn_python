@@ -5,7 +5,7 @@ from dataclasses import field, dataclass
 class User:
   name: str
   age: int
-  items: list[int] = field(default_factory=list)
+  items: list[int] = field(default_factory=lambda: ['note', 'pen'])
   
 user = User('sato', 20)
 print(user.name)
