@@ -1,11 +1,9 @@
 import traceback
+import trbck2
 
-try:
-  result = 1/ 0
-  print(result)
+def main():
+  trbck2.func1()
+  
+if __name__ == '__main__':
+  main()
 
-except ZeroDivisionError:
-  print('---トレースバックを出力開始---')
-  t = traceback.format_exc()
-  print(t)
-  print('---トレースバックを出力終了---')
